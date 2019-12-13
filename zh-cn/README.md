@@ -260,6 +260,12 @@ docker export my_container | gzip > my_container.tar.gz
 通过 `load` 命令来加载镜像，会创建一个新的镜像，并继承原镜像的所有历史。
 通过 `import` 将容器作为镜像导入，也会创建一个新的镜像，但并不包含原镜像的历史，因此会比使用 `load` 方式生成的镜像更小。
 
+### 查看image/container详细信息
+```bash
+docker inspect image/container
+```
+inspect命令的参数可以是id也可以是其他能唯一标识镜像或容器的信息。
+
 ## 网络(Networks)
 
 Docker 具备 [网络](https://docs.docker.com/engine/userguide/networking/) 功能。我并不是很了解它，所以这是一个扩展本文的好地方。文档 [使用网络](https://docs.docker.com/engine/userguide/networking/work-with-networks/) 指出，这是一种无需暴露端口即可实现 Docker 容器间通信的好方法。
